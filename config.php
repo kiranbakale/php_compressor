@@ -98,26 +98,5 @@ fclose($file2);
  ?>
 
 
-pipeline {
-  agent any
-  stages {
-      
-    stage('git clone') {
-      steps {
-        sh 'git clone https://github.com/AshishSarawad/php-app.git'
-      }
-    }
-    stage('verify version') {
-      steps {
-        sh 'php --version'
-      }
-    }
-    stage('hello') {
-      steps {
-        sh 'php hello.php'
-      }
-    }
-  }
-}
 
 has context menu
